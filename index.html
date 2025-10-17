@@ -9,11 +9,14 @@
     <body>
         <h1>TU BIBLIOTECA</h1>
         <form>
-            <input type="text" id="name" placeholder="the name">
-            <input type="text" id="author" placeholder="the author">
-            <input type="number"id="pages" placeholder="the pages">
-            <input type="radio" id="nreaded" name="readed" value="false">
-            <input type="radio" id="nreaded" name="readed" value="true">
+            <input type="text" id="name" class="inputs" placeholder="the name">
+            <input type="text" id="author" class="inputs" placeholder="the author">
+            <input type="number"id="pages" class="inputs" placeholder="the pages">
+            <div class="radios-inline">
+                <h4>Readed?</h4>
+                <input type="radio" id="treaded" name="readed" value="false">
+                <input type="radio" id="freaded" name="readed" value="true">
+            </div>
         </form>
         <div id="container"></div>
         <script src="script.js"></script>
