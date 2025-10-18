@@ -34,8 +34,14 @@ form .inputs {
     accent-color: #12d112;
 }
 #freaded {
-    margin-left: 100px;
     accent-color: rgb(209, 18, 18);
+}
+#submit {
+    border-radius: 10px;
+    border: 2px solid rgba(71, 75, 78, 0.3);
+    font-family: sans-serif;
+    font-weight: 600;
+    font-style: oblique;
 }
 #container {
     height: 200px;
@@ -43,15 +49,71 @@ form .inputs {
     border: 2px solid black;
     border-radius: 40px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 10px;
 }
 
 .book {
-    width: 30px;
-    height: 40px;
+    width: 100px;
+    height: 60px;
+    padding-bottom: 2px;
     border-radius: 20px;
+    border: 2px solid rgba(175, 118, 12, 0.747);
+    background-color: rgba(175, 118, 12, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    white-space: normal;    /* permite que el texto se divida en líneas */
+    word-wrap: break-word;  /* para compatibilidad antigua */
+    overflow-wrap: break-word; /* estándar moderno */
+}
+.del {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    border: 1px solid rgba(71, 75, 78, .3);
+    margin: 0 auto;
+}
+p {
+    margin: 0;
+    padding: 0 10px;
+    font-size: small;
+}
+button {
+    transition: transform 0.1s ease;
+}
+button:active {
+    transform: scale(1.1);
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 66%;
+    position: absolute;      /* fijo respecto a la ventana */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(175, 118, 12, 0.3);
+    background-color: rgba(175, 118, 12, 0.9); /* opcional: para ver el div */
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 5px 200px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+.info.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.info.hidden {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
 }
